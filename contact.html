@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JapAvenue — Japanese Fashion</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script defer src="script.js"></script>
+<meta name="description" content="Contact JapAvenue — Say hello.">
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html">JapAvenue<span class="dot">•</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <button class="btn btn-cart" id="openCart" aria-label="Open cart">Cart <span id="cartCount" class="badge">0</span></button>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Contact</h1>
+    <p>Have a question about sizing, shipping, or styling? Drop us a line.</p>
+  </div>
+</section>
+
+<section class="container section">
+  <div class="contact-grid">
+    <form class="card form" id="contactForm">
+      <h3>Send a Message</h3>
+      <input class="input" type="text" id="name" placeholder="Your Name" required>
+      <input class="input" type="email" id="email" placeholder="Your Email" required>
+      <textarea class="input" id="message" rows="5" placeholder="Your Message" required></textarea>
+      <button class="btn btn-accent" type="submit">Send (Demo)</button>
+      <p class="muted tiny">This is a front-end demo; connect your form backend later.</p>
+    </form>
+    <div class="card">
+      <h3>Store Info</h3>
+      <p><strong>Email:</strong> hello@japavenue.com</p>
+      <p><strong>Hours:</strong> Mon–Fri, 10:00–18:00 (GMT+8)</p>
+      <p><strong>Styles:</strong> Harajuku • Streetwear • Kimono-inspired • Minimalist</p>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <h3>JapAvenue</h3>
+      <p>Curated Japanese styles — Streetwear, Harajuku, Kimono-inspired, Minimalist chic.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <ul class="list">
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Follow</h4>
+      <div class="socials">
+        <a href="#" aria-label="Instagram" class="icon">
+          <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm5 3.5a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11zm0 2a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zM18 6.2a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" fill="currentColor"/></svg>
+        </a>
+        <a href="#" aria-label="TikTok" class="icon">
+          <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M21 8.5c-2 0-3.8-.8-5.2-2.1V17a6 6 0 1 1-6-6c.3 0 .7 0 1 .1v2.3A3.6 3.6 0 1 0 12.8 17V3h2.4c.2 3 2.7 5.5 5.8 5.5z" fill="currentColor"/></svg>
+        </a>
+        <a href="#" aria-label="X" class="icon">
+          <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M4 3h4.6l3.2 4.8L15 3h5l-6.2 8.3L20 21h-4.6l-3.6-5.4L8.8 21H4l6.5-8.8z" fill="currentColor"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="container legal">&copy; <span id="year"></span> JapAvenue. All rights reserved.</div>
+</footer>
+
+
+<div class="cart-drawer" id="cartDrawer" aria-hidden="true">
+  <div class="cart-panel">
+    <button class="close" id="closeCart" aria-label="Close cart">&times;</button>
+    <h3>Your Cart</h3>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-summary">
+      <div class="line"><span>Subtotal</span><span id="cartSubtotal">¥0</span></div>
+      <a class="btn btn-accent full" href="shop.html#checkout">Proceed to Checkout</a>
+      <p class="muted">Checkout is a placeholder. Integrate your payment provider later.</p>
+    </div>
+  </div>
+  <div class="cart-backdrop" id="cartBackdrop"></div>
+</div>
+
+</body>
+</html>
